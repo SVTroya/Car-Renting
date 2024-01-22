@@ -9,10 +9,6 @@ export function selectFavorites(state) {
   return state.catalog.favorites
 }
 
-export const selectFavoriteCars = createSelector([selectCatalog, selectFavorites], (catalog, favorites) => {
-  return catalog.filter(car => favorites.includes(car.id))
-})
-
 export const selectFilteredCars = createSelector(
   [selectCatalog, selectBrand, selectPriceLevel, selectMileageFrom, selectMileageTo],
   (catalog, brand, priceLevel, mileageFrom, mileageTo) => {
@@ -30,6 +26,9 @@ export const selectFilteredCars = createSelector(
     }
 
     return !(mileageTo && car.mileage > mileageTo);
-
   })
+})
+
+export const selectFavoriteCars = createSelector([selectFilteredCars, selectFavorites], (filteredCatalog, favorites) => {
+  return filteredCatalog.filter(car => favorites.includes(car.id))
 })

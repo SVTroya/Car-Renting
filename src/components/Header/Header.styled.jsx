@@ -8,6 +8,7 @@ export const StyledHeader = styled.header`
   box-shadow: 0 1px 8px 1px rgba(173, 173, 173, 0.8);
   background-color: #FFFFFF;
   align-items: center;
+  position: relative
 `
 
 export const HeaderWrapper = styled.div`

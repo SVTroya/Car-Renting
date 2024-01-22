@@ -73,7 +73,6 @@ function ListFilters() {
               id='mileage_from'
               name='mileage_from'
               type='number'
-              placeholder='From'
               autoComplete="off"
             />
             <HiddenLabel id='mileage_to'>Сar mileage To</HiddenLabel>
@@ -82,7 +81,7 @@ function ListFilters() {
               id='mileage_to'
               name='mileage_to'
               type='number'
-              placeholder='To'/>
+              autoComplete="off"/>
           </CarMileageInputsWrapper>
         </CarMileageWrapper>
         <SearchButton type='submit' onClick={handleSearchClick}>Search</SearchButton>
