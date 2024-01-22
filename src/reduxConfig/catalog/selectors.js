@@ -17,24 +17,19 @@ export const selectFilteredCars = createSelector(
   [selectCatalog, selectBrand, selectPriceLevel, selectMileageFrom, selectMileageTo],
   (catalog, brand, priceLevel, mileageFrom, mileageTo) => {
   return catalog.filter(car => {
-    let isValid = true
-
-    if (brand) {
-      isValid = car.make === brand
+    if (brand && car.make !== brand) {
+      return false
     }
 
-    if(priceLevel && isValid) {
-      isValid = car.rentalPrice <= priceLevel
+    if(priceLevel && car.rentalPrice > priceLevel) {
+      return false
     }
 
-    if(mileageFrom && isValid) {
-      isValid = car.mileage >= mileageFrom
+    if(mileageFrom && car.mileage < mileageFrom) {
+      return false
     }
 
-    if(mileageTo && isValid) {
-      isValid = car.mileage <= mileageTo
-    }
+    return !(mileageTo && car.mileage > mileageTo);
 
-    return isValid
   })
 })

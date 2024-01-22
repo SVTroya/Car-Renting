@@ -64,7 +64,8 @@ const selectStyle = {
     fontSize: '16px',
     fontWeight: '500',
     overflow: 'hidden',
-    marginTop: '4px'
+    marginTop: '4px',
+    zIndex: '10'
   }),
   option: (styles, {isFocused, isSelected}) => {
     if (isFocused) {
