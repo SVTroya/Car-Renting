@@ -26,15 +26,15 @@ export const StyledLink = styled(NavLink)`
   font-size: 20px;
   font-weight: 600;
   color: #121417;
-  
-  &.active{
+
+  &.active {
     color: #0B44CD;
     font-weight: 700;
   }
 
   transition: color 250ms ease-in-out;
 
-  &:not(.active)::after{
+  &:not(.active)::after {
     content: '';
     height: 3px;
     width: 0;
@@ -44,12 +44,11 @@ export const StyledLink = styled(NavLink)`
     background-color: #121417;
     border-radius: 5px;
 
-    transition:
-      background-color 250ms ease-in-out,
-      width 250ms ease-in-out;
+    transition: background-color 250ms ease-in-out,
+    width 250ms ease-in-out;
   }
 
-  &:hover::after{
+  &:hover::after {
     width: 100%;
     background-color: #0B44CD;
   }

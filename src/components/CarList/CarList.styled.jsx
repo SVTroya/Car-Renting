@@ -18,7 +18,7 @@ export const LoadMoreBtn = styled.button`
   background-color: transparent;
   border: none;
   outline: transparent;
-  text-decoration: underline ;
+  text-decoration: underline;
   color: #3470FF;
   font-size: 16px;
   font-weight: 500;
@@ -31,4 +31,10 @@ export const LoadMoreBtn = styled.button`
     color: #0B44CD;
     outline: transparent;
   }
+`
+
+export const EmptyListMessage = styled.p`
+  width: fit-content;
+  font-size: 24px;
+  margin: 0 auto;
 `

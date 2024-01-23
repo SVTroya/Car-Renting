@@ -4,7 +4,7 @@ const initialState = {
   brand: null,
   priceLevel: null,
   mileageFrom: null,
-  mileageTo: null,
+  mileageTo: null
 }
 
 const filtersSlice = createSlice({

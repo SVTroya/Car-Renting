@@ -60,5 +60,3 @@ export const CloseBtn = styled(Close)`
   pointer-events: none;
   outline: none;
 `;
-
-

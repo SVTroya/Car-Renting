@@ -4,6 +4,7 @@ import {FLUSH, PAUSE, PERSIST, persistReducer, persistStore, PURGE, REGISTER, RE
 import {carDetailsReducer} from './carDetails/slice.js'
 import storage from 'redux-persist/lib/storage'
 import {filtersReducer} from './filters/slice.js'
+import {globalReducer} from './global/slice.js'
 
 const catalogPersistConfig = {
   key: 'favorites',
@@ -15,7 +16,8 @@ export const store = configureStore({
   reducer: {
     catalog: persistReducer(catalogPersistConfig, catalogReducer),
     carDetails: carDetailsReducer,
-    filters: filtersReducer
+    filters: filtersReducer,
+    global: globalReducer
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

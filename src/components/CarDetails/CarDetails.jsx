@@ -10,6 +10,7 @@ import {ParamsRowWrapper} from '../../utilities/Common.styled.jsx'
 import FavoriteCheckbox from '../FavoriteCheckbox/FavoriteCheckbox.jsx'
 
 function CarDetails() {
+  const car = useSelector(selectCarDetails)
   const {
     id,
     year,
@@ -26,7 +27,7 @@ function CarDetails() {
     address,
     rentalConditions,
     mileage
-  } = useSelector(selectCarDetails)
+  } = car
 
   const addressSplit = address.split(', ')
   const rentalConditionsSplit = rentalConditions.split('\n')
@@ -44,7 +45,7 @@ function CarDetails() {
       <ImageWrapper>
         <img src={img} alt={`${make} ${model}`}/>
       </ImageWrapper>
-      <FavoriteCheckbox id={id} />
+      <FavoriteCheckbox car={car} />
       <CarInfoWrapper>
         <div>
           <HeaderWrapper>

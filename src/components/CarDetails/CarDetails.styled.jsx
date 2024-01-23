@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import {Checkbox} from '@mui/material'
-import {ButtonStyled} from '../../utilities/Common.styled.jsx'
 
 export const CarDetailsContainer = styled.div`
   position: relative;

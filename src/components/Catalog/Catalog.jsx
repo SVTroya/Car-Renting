@@ -2,10 +2,10 @@ import React from 'react'
 import ListFilters from '../ListFilters/ListFilters.jsx'
 import CarList from '../CarList/CarList.jsx'
 import {useSelector} from 'react-redux'
-import { selectFavoriteCars, selectFilteredCars} from '../../reduxConfig/catalog/selectors.js'
+import {selectFilteredCars, selectFilteredFavCars} from '../../reduxConfig/catalog/selectors.js'
 
 function Catalog({onlyFavorites = false}) {
-  const cars = onlyFavorites ? useSelector(selectFavoriteCars) : useSelector(selectFilteredCars)
+  const cars = onlyFavorites ? useSelector(selectFilteredFavCars) : useSelector(selectFilteredCars)
 
   return (
     <>

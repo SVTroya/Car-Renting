@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "homepage": "https://svtroya.github.io/car-renting/",
   "type": "module",
+  "author": "Lana Biruk, <my.svtroy@gmail.com>",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

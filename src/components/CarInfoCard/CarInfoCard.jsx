@@ -13,7 +13,6 @@ import FavoriteCheckbox from '../FavoriteCheckbox/FavoriteCheckbox.jsx'
 
 function CarInfoCard({carInfo}) {
   const {
-    id,
     year,
     make,
     model,
@@ -37,7 +36,7 @@ function CarInfoCard({carInfo}) {
   return (
     <Card>
       <ImageWrapper>
-        <img src={img} alt={`${make} ${model}`}/>
+        <img src={img} alt={`${make} ${model}`} loading='lazy'/>
       </ImageWrapper>
       <HeaderWrapper>
         <h3>{make} {(make.length + model.length) <= 20 && (<span>{model}</span>)}, {year}</h3>
@@ -54,7 +53,7 @@ function CarInfoCard({carInfo}) {
         <p>{mileage}</p>
       </ParamsRowWrapper>
       <LearnMoreBtn onClick={handleLearnMoreClick}>Learn more</LearnMoreBtn>
-      <FavoriteCheckbox id={id} />
+      <FavoriteCheckbox car={carInfo} />
     </Card>
   )
 }

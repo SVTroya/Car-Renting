@@ -9,9 +9,7 @@ function SharedLayout() {
       <Header/>
       <main>
         <Container>
-          {/* <Suspense fallback={<div>Loading...</div>}>*/}
           <Outlet/>
-          {/* </Suspense>*/}
         </Container>
       </main>
     </>

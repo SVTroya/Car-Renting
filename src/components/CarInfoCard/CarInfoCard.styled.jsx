@@ -15,7 +15,7 @@ export const ImageWrapper = styled.div`
   background-color: #F3F3F2;
   overflow: clip;
 
-  img{
+  img {
     width: inherit;
     height: inherit;
     object-fit: cover;

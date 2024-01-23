@@ -9,13 +9,13 @@ function Header() {
     <StyledHeader>
       <Container>
         <HeaderWrapper>
-          <LogoWrapper to={'/'} >
+          <LogoWrapper to={'/'}>
             <svg width={25} height={25}>
               <use href={`${icons}#icon-logo`}/>
             </svg>
             <p>Your Car Renting</p>
           </LogoWrapper>
-          <Navigation />
+          <Navigation/>
         </HeaderWrapper>
       </Container>
     </StyledHeader>

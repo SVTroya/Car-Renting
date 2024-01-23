@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit'
-import {fetchByPageCatalogThunk, fetchCatalogThunk} from './actions.js'
+import {fetchByPageCatalogThunk} from './actions.js'
 import {CARS_PER_PAGE} from '../../axiosConfif/api.js'
 
 const initialState = {
@@ -17,16 +17,13 @@ const catalogSlice = createSlice({
       state.favorites.push(payload)
     },
     removeFromFavorite: (state, {payload}) => {
-      const index = state.favorites.findIndex(id => id === payload)
+      const index = state.favorites.findIndex(car => car.id === payload)
       state.favorites.splice(index, 1)
     },
     resetCatalogState: (state) => {
       state.catalog = []
       state.page = 0
-      state. isLimitReached = false
-    },
-    setIsLimitReached: (state, {payload}) => {
-      state. isLimitReached = payload
+      state.isLimitReached = false
     }
   },
   extraReducers: builder => {
@@ -38,11 +35,8 @@ const catalogSlice = createSlice({
           state.isLimitReached = true
         }
       })
-      .addCase(fetchCatalogThunk.fulfilled, (state, {payload}) => {
-        state.catalog = payload
-      })
   }
 })
 
-export const {addToFavorite, removeFromFavorite, setIsLimitReached, resetCatalogState} = catalogSlice.actions
+export const {addToFavorite, removeFromFavorite, resetCatalogState} = catalogSlice.actions
 export const catalogReducer = catalogSlice.reducer

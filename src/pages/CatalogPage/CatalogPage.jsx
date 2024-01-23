@@ -9,7 +9,7 @@ function CatalogPage() {
 
   useEffect(() => {
     dispatch(resetCatalogState())
-    dispatch(fetchByPageCatalogThunk(1))
+    dispatch(fetchByPageCatalogThunk({page: 1}))
   }, [dispatch])
 
   return (

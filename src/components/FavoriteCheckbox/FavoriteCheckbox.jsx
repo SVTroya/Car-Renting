@@ -6,12 +6,12 @@ import {addToFavorite, removeFromFavorite} from '../../reduxConfig/catalog/slice
 import {useDispatch, useSelector} from 'react-redux'
 import {selectFavorites} from '../../reduxConfig/catalog/selectors.js'
 
-function FavoriteCheckbox({id}) {
+function FavoriteCheckbox({car}) {
   const dispatch = useDispatch()
-  const favoriteCarIds = useSelector(selectFavorites)
+  const favoriteCars = useSelector(selectFavorites)
 
-  function setFavoriteStatus(id, status) {
-    status ? dispatch(addToFavorite(id)) : dispatch(removeFromFavorite(id))
+  function setFavoriteStatus(car, status) {
+    status ? dispatch(addToFavorite(car)) : dispatch(removeFromFavorite(car.id))
   }
 
   const label = {inputProps: {'aria-label': 'Favorite checkbox'}}
@@ -19,15 +19,17 @@ function FavoriteCheckbox({id}) {
     <CheckboxStyled
       {...label}
       sx={{
-      color: '#FFFFFFCC',
-      '&.Mui-checked': {
-        color: '#3470FF'
-      }
-    }}
+        color: '#FFFFFFCC',
+        '&.Mui-checked': {
+          color: '#3470FF'
+        }
+      }}
       icon={<FavoriteBorder/>}
       checkedIcon={<Favorite/>}
-      checked={favoriteCarIds.includes(id)}
-      onChange={e => {setFavoriteStatus(id, e.target.checked)}}
+      checked={favoriteCars.some(favoriteCar => favoriteCar.id === car.id)}
+      onChange={e => {
+        setFavoriteStatus(car, e.target.checked)
+      }}
       id={crypto.randomUUID()}
     />
   )

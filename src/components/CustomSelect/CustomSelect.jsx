@@ -1,4 +1,4 @@
-import Select, {components} from 'react-select'
+import {components} from 'react-select'
 import {MdKeyboardArrowDown, MdKeyboardArrowUp} from 'react-icons/md'
 import React from 'react'
 import {Controller} from 'react-hook-form'
@@ -27,7 +27,7 @@ const selectStyle = {
     borderRadius: '14px',
     boxShadow: 'none',
     cursor: 'pointer',
-/*    width: '224px',*/
+    /*    width: '224px',*/
 
     '&:hover': {
       border: 'none'
