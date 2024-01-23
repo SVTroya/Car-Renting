@@ -5,7 +5,7 @@ function Hero() {
   return (
     <HeroSection>
       <h1>Embark on the Journey of a Lifetime with <br/><span>Your Car Renting</span>!</h1>
-      <SearchForCarBtn>Search for a Car</SearchForCarBtn>
+      <SearchForCarBtn to='/catalog'>Search for a Car</SearchForCarBtn>
     </HeroSection>
   )
 }
