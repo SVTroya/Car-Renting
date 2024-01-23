@@ -415,6 +415,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     font-weight: 500;
     font-size: 18px;
     line-height: 1.33;
+    margin: 0;
   }
 
   span {
