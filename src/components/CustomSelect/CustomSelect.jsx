@@ -120,6 +120,7 @@ const DropdownIndicator = props => {
 function CustomSelect({control, name, dataset, width, placeholder = ''}) {
   return (
     <Controller
+      id={name}
       name={name}
       control={control}
       render={({field, value}) => (

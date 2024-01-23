@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {SectionHeader} from '../../utilities/Common.styled.jsx'
 import {
   FiltersSection,
@@ -14,7 +14,7 @@ import {useForm} from 'react-hook-form'
 import CustomSelect from '../CustomSelect/CustomSelect.jsx'
 import makes from '../../data/makes.json'
 import {useDispatch} from 'react-redux'
-import {setBrand, setMileageFrom, setMileageTo, setPriceLevel} from '../../reduxConfig/filters/slice.js'
+import {resetFilters, setBrand, setMileageFrom, setMileageTo, setPriceLevel} from '../../reduxConfig/filters/slice.js'
 
 function ListFilters() {
   const dispatch = useDispatch()
@@ -51,6 +51,10 @@ function ListFilters() {
     dispatch(setMileageTo(formData.mileage_to))
   }
 
+  useEffect(() => {
+    dispatch(resetFilters())
+  }, [dispatch])
+
   return (
     <FiltersSection>
       <SectionHeader>Car search filters</SectionHeader>
@@ -67,19 +71,19 @@ function ListFilters() {
         <CarMileageWrapper>
           <span>Сar mileage / km</span>
           <CarMileageInputsWrapper>
-            <HiddenLabel id='mileage_from'>Сar mileage From</HiddenLabel>
+            <HiddenLabel htmlFor='mileage_from'>Сar mileage From</HiddenLabel>
             <InputFrom
-              {...register('mileage_from')}
               id='mileage_from'
               name='mileage_from'
+              {...register('mileage_from')}
               type='number'
               autoComplete="off"
             />
-            <HiddenLabel id='mileage_to'>Сar mileage To</HiddenLabel>
+            <HiddenLabel htmlFor='mileage_to'>Сar mileage To</HiddenLabel>
             <InputTo
-              {...register('mileage_to')}
               id='mileage_to'
               name='mileage_to'
+              {...register('mileage_to')}
               type='number'
               autoComplete="off"/>
           </CarMileageInputsWrapper>

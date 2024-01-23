@@ -1,22 +1,19 @@
 import React, {useEffect} from 'react'
 import Catalog from '../../components/Catalog/Catalog.jsx'
 import {useDispatch} from 'react-redux'
-import {fetchCatalogThunk} from '../../reduxConfig/catalog/actions.js'
-import {CatalogSection} from './CatalogPage.styled.jsx'
-import {SectionHeader} from '../../utilities/Common.styled.jsx'
+import {fetchByPageCatalogThunk} from '../../reduxConfig/catalog/actions.js'
+import {resetCatalogState} from '../../reduxConfig/catalog/slice.js'
 
 function CatalogPage() {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(fetchCatalogThunk());
-  }, [dispatch]);
+    dispatch(resetCatalogState())
+    dispatch(fetchByPageCatalogThunk(1))
+  }, [dispatch])
 
   return (
-    <CatalogSection>
-      <SectionHeader>Cars Catalog</SectionHeader>
-      <Catalog/>
-    </CatalogSection>
+    <Catalog/>
   )
 }
 

@@ -111,4 +111,6 @@ export const CarMileageInputsWrapper = styled.div`
 
 export const SearchButton = styled(ButtonStyled)`
   align-self: flex-end;
+  padding: 14px 44px;
+  height: 48px;
 `

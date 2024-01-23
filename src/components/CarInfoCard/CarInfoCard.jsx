@@ -51,7 +51,6 @@ function CarInfoCard({carInfo}) {
       <ParamsRowWrapper>
         <p>{type}</p>
         <p>{make}</p>
-        <p>{id}</p>
         <p>{mileage}</p>
       </ParamsRowWrapper>
       <LearnMoreBtn onClick={handleLearnMoreClick}>Learn more</LearnMoreBtn>

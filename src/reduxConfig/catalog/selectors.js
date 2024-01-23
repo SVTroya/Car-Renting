@@ -9,6 +9,14 @@ export function selectFavorites(state) {
   return state.catalog.favorites
 }
 
+export function selectPage(state) {
+  return state.catalog.page
+}
+
+export function selectIsLimitReached(state) {
+  return state.catalog.isLimitReached
+}
+
 export const selectFilteredCars = createSelector(
   [selectCatalog, selectBrand, selectPriceLevel, selectMileageFrom, selectMileageTo],
   (catalog, brand, priceLevel, mileageFrom, mileageTo) => {

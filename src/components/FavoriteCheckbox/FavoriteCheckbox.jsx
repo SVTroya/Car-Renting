@@ -28,6 +28,7 @@ function FavoriteCheckbox({id}) {
       checkedIcon={<Favorite/>}
       checked={favoriteCarIds.includes(id)}
       onChange={e => {setFavoriteStatus(id, e.target.checked)}}
+      id={crypto.randomUUID()}
     />
   )
 }

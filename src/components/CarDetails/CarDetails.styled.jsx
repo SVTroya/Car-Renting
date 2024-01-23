@@ -81,19 +81,25 @@ export const RentalConditionsWrapper = styled.div`
   }
 `
 
-export const RentalCarBtn = styled(ButtonStyled)`
+export const RentalCarLink = styled.a`
   align-self: flex-start;
-`
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.43;
+  display: inline-flex;
+  padding: 12px 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  background-color: #3470FF;
+  color: #FFFFFF;
+  cursor: pointer;
 
-export const CheckboxStyled = styled(Checkbox)`
-  && {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    fill: #FFFFFFCC;
-  }
+  transition: background-color 250ms ease-in-out;
 
-  &:hover{
-    fill: #3470FF;
+  &:hover, &:focus {
+    background-color: #0B44CD;
+    outline: transparent;
+    color: #FFFFFF;
   }
 `

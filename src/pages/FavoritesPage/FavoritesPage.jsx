@@ -1,14 +1,20 @@
-import React from 'react'
-import {SectionHeader} from '../../utilities/Common.styled.jsx'
+import React, {useEffect} from 'react'
 import Catalog from '../../components/Catalog/Catalog.jsx'
-import {CatalogSection} from '../CatalogPage/CatalogPage.styled.jsx'
+import {useDispatch} from 'react-redux'
+import {fetchCatalogThunk} from '../../reduxConfig/catalog/actions.js'
+import {setIsLimitReached} from '../../reduxConfig/catalog/slice.js'
 
 function FavoritesPage() {
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    dispatch(setIsLimitReached(true));
+    dispatch(fetchCatalogThunk());
+  }, [dispatch]);
+
   return (
-    <CatalogSection>
-      <SectionHeader>Favorite Cars</SectionHeader>
-      <Catalog onlyFavorites={true}/>
-    </CatalogSection>
+    <Catalog onlyFavorites={true}/>
   )
 }
 

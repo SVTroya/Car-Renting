@@ -22,9 +22,12 @@ const filtersSlice = createSlice({
     },
     setMileageTo: (state, {payload}) => {
       state.mileageTo = payload
+    },
+    resetFilters: () => {
+      return initialState
     }
   }
 })
 
-export const {setBrand, setPriceLevel, setMileageFrom, setMileageTo} = filtersSlice.actions
+export const {setBrand, setPriceLevel, setMileageFrom, setMileageTo, resetFilters} = filtersSlice.actions
 export const filtersReducer = filtersSlice.reducer
