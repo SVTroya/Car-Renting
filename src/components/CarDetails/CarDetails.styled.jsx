@@ -36,6 +36,7 @@ export const HeaderWrapper = styled.div`
     font-weight: 500;
     font-size: 18px;
     line-height: 1.33;
+    margin: 0;
   }
 
   span {
