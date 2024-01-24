@@ -703,7 +703,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   display: flex;
   gap: 20px;
   align-items: center;
-`;function yM(){return O.jsxs(vM,{children:[O.jsx(qc,{$width:"57px",to:"/",children:"Home"}),O.jsx(qc,{$width:"77px",to:"/catalog",children:"Catalog"}),O.jsx(qc,{$width:"127px",to:"/favorites",children:"Favorite Cars"})]})}const wM="/car-renting/assets/icons-9IlvMf0x.svg";function SM(){return O.jsx(pM,{children:O.jsx(Mx,{children:O.jsxs(hM,{children:[O.jsxs(mM,{to:"/",children:[O.jsx("svg",{width:25,height:25,children:O.jsx("use",{href:`${wM}#icon-logo`})}),O.jsx("p",{children:"Your Car Renting"})]}),O.jsx(yM,{})]})})})}function xM(){return O.jsxs(O.Fragment,{children:[O.jsx(SM,{}),O.jsx("main",{children:O.jsx(Mx,{children:O.jsx(ik,{})})})]})}const bM="#4fa94d",CM={"aria-busy":!0,role:"progressbar"};q.div`
+`;function yM(){return O.jsxs(vM,{children:[O.jsx(qc,{$width:"57px",to:"/",children:"Home"}),O.jsx(qc,{$width:"77px",to:"/catalog",children:"Catalog"}),O.jsx(qc,{$width:"127px",to:"/favorites",children:"Favorite Cars"})]})}const wM="/car-renting/assets/icons-N7giKh6A.svg";function SM(){return O.jsx(pM,{children:O.jsx(Mx,{children:O.jsxs(hM,{children:[O.jsxs(mM,{to:"/",children:[O.jsx("svg",{width:25,height:25,children:O.jsx("use",{href:`${wM}#icon-logo`})}),O.jsx("p",{children:"Your Car Renting"})]}),O.jsx(yM,{})]})})})}function xM(){return O.jsxs(O.Fragment,{children:[O.jsx(SM,{}),O.jsx("main",{children:O.jsx(Mx,{children:O.jsx(ik,{})})})]})}const bM="#4fa94d",CM={"aria-busy":!0,role:"progressbar"};q.div`
   display: ${e=>e.$visible?"flex":"none"};
 `;const EM="http://www.w3.org/2000/svg",Zt=242.776657104492,kM=1.6,OM=Fp`
 12.5% {
