@@ -11,8 +11,7 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist",
-    "predeploy": "npm run build",
-    "lint:js": "eslint src/**/*.{js,jsx}"
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [
