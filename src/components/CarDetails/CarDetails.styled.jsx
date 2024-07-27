@@ -5,11 +5,16 @@ export const CarDetailsContainer = styled.div`
 `
 
 export const ImageWrapper = styled.div`
-  width: 461px;
+  width: 100%;
   height: 248px;
   border-radius: 14px;
   background-color: #F3F3F2;
   overflow: clip;
+
+  @media only screen and (min-width: 768px) {
+    width: 461px;
+    max-width:unset;
+  }
 
   img{
     width: inherit;

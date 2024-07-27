@@ -23,7 +23,7 @@ export const StyledLink = styled(NavLink)`
   position: relative;
   text-decoration: none;
   padding: 10px 0;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   color: #121417;
 
@@ -56,6 +56,10 @@ export const StyledLink = styled(NavLink)`
   &:hover {
     color: #0B44CD;
   }
+
+  @media only screen and (min-width: 768px) {
+    font-size: 20px;
+  }
 `
 
 export const LogoWrapper = styled(NavLink)`
@@ -70,11 +74,13 @@ export const LogoWrapper = styled(NavLink)`
     color: #121417;
     margin: 0;
     font-weight: 700;
+    display: none;
   }
 
   @media only screen and (min-width: 768px) {
     p {
       font-size: 17.1px;
+      display: inline;
     }
 
     svg {

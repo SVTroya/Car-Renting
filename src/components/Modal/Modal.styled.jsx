@@ -17,20 +17,47 @@ export const Backdrop = styled.div`
 
 export const StyledModal = styled.div`
   position: relative;
-  width: 541px;
-  border-radius: 24px;
+  min-width: 320px;
+  max-width: 335px;
+  height: calc(100vh - 20px);
+  border-radius: 14px;
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  padding: 30px 16px 20px;
   background-color: #FFFFFF;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin: 10px ;
+    background: transparent;
+    border-radius: 100px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #0B44CD;
+    border-radius: 100px;
+    border: 2px solid #FFFFFF;
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 541px;
+    max-width:unset;
+    padding: 40px;
+    border-radius: 24px;
+    height:auto;
+  }
 `
 
 export const CloseModalBtn = styled.button`
-  display: none;
+  display: flex;
   position: absolute;
   padding: 0;
-  right: 16px;
-  top: 16px;
+  right: 10px;
+  top: 10px;
   border: none;
   outline: transparent;
   background-color: transparent;
@@ -59,4 +86,14 @@ export const CloseBtn = styled(Close)`
   color: currentColor;
   pointer-events: none;
   outline: none;
+  
+  &.MuiSvgIcon-root {
+    width: 16px;
+    height: 16px;
+
+    @media only screen and (min-width: 768px) {
+      width: 24px;
+      height: 24px;
+    }
+  }
 `;

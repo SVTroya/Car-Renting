@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const CarListSection = styled.section`
-  padding: 50px 0;
+  padding: 50px 0 20px;
 `
 
 export const CarListStyled = styled.ul`
@@ -9,6 +9,7 @@ export const CarListStyled = styled.ul`
   grid-template-columns: repeat(auto-fit, 274px);
   grid-column-gap: 29px;
   grid-row-gap: 50px;
+  justify-content: center;
 
   width: 100%;
 `
@@ -24,7 +25,7 @@ export const LoadMoreBtn = styled.button`
   font-weight: 500;
   line-height: 1.5;
   transition: color 250ms ease-in-out;
-  margin: 100px auto 50px;
+  margin: 60px auto 0;
   padding: 0;
 
   &:hover, &:focus {

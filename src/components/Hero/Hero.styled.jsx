@@ -1,11 +1,12 @@
 import styled from 'styled-components'
-import heroBcg from '../../assets/hero.webp'
+import heroBcgSmall from '../../assets/hero_small.webp'
+import heroBcgMedium from '../../assets/hero_medium.webp'
+import heroBcgLarge from '../../assets/hero_large.webp'
 import {NavLink} from 'react-router-dom'
 
 export const HeroSection = styled.section`
-  width: 1184px;
   height: 450px;
-  background-image: url(${heroBcg});
+  background-image: url(${heroBcgSmall});
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -17,15 +18,39 @@ export const HeroSection = styled.section`
   z-index: -10;
   gap: 20px;
 
+  @media only screen and (min-width: 768px) {
+    background-image: url(${heroBcgMedium});
+    height: 400px;
+  }
+
+  @media only screen and (min-width: 1280px) {
+    background-image: url(${heroBcgLarge});
+    width: 1184px;
+    height: 450px;
+  }
+
   h1 {
-    width: 500px;
+    min-width: 280px;
+    max-width: 320px;
     color: #FFFFFF;
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 700;
     text-align: center;
 
+    @media only screen and (min-width: 768px) {
+      max-width: 500px;
+      font-size: 36px;
+    }
+
     span {
-      font-size: 50px;
+      font-size: 40px;
+      line-height: 1.2;
+      color: #b2f0fa;
+
+      @media only screen and (min-width: 768px) {
+        font-size: 50px;
+        line-height: 1.5;
+      }
     }
   }
 `

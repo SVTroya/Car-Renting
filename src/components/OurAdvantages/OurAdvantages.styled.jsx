@@ -16,17 +16,26 @@ export const AdvantagesList = styled.ul`
   display: flex;
   gap: 20px;
   justify-content: center;
+  flex-direction: column;
   margin-top: 30px;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 
   li {
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
-    width: calc((100% - 2 * 20px) / 3);
-    height: 200px;
+    width: 100%;
+    min-height: 200px;
     padding: 20px 16px;
     border: 4px solid #305073;
+
+    @media only screen and (min-width: 768px) {
+      width: calc((100% - 2 * 20px) / 3);
+    }
 
     h3 {
       font-size: 20px;

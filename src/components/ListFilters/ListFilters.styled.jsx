@@ -7,10 +7,31 @@ export const FiltersSection = styled.section`
 
 export const Form = styled.form`
   display: flex;
+  flex-direction: column;
   gap: 18px;
   align-items: center;
-  margin: 0 auto;
+  min-width: 280px;
+  max-width: 335px;
+
   justify-content: center;
+
+  @media only screen and (min-width: 768px) {
+    max-width: unset;
+  }
+  
+  @media only screen and (min-width: 1280px) {
+    flex-direction: row;
+  }
+`
+
+export const Filters = styled.div`
+  display: flex;
+  gap: 18px;
+  flex-direction: column;
+
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 `
 
 export const Label = styled.label`
@@ -41,7 +62,7 @@ export const HiddenLabel = styled.label`
 
 export const Input = styled.input`
   display: flex;
-  width: 160px;
+  width: 140px;
   height: 48px;
   padding: 14px 24px 14px 75px;
   align-items: center;
@@ -52,6 +73,10 @@ export const Input = styled.input`
   font-weight: 500;
   line-height: 1.11;
   outline: none;
+
+  @media only screen and (min-width: 768px) {
+    width: 160px;
+  }
   
   &::placeholder {
     color: #121417;
@@ -101,16 +126,23 @@ export const CarMileageInputsWrapper = styled.div`
     content: 'To';
     position: absolute;
     top: 14px;
-    left: 184px;
+    left: 164px;
     color: #121417;
     font-weight: 500;
     line-height: 1.11;
     font-size: 18px;
+
+    @media only screen and (min-width: 768px) {
+      left: 184px;
+    }
   }
 `
 
 export const SearchButton = styled(ButtonStyled)`
-  align-self: flex-end;
   padding: 14px 44px;
   height: 48px;
+
+  @media only screen and (min-width: 1280px) {
+    align-self: flex-end;
+  }
 `
